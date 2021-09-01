@@ -1,0 +1,14 @@
+<div>
+<app-tech-row
+*ngFor="let tech of techs" 
+[tech]="tech" 
+(outputClick)="outputAction($event)" 
+[class.isSelected]="isSelectedFunction(tech)"
+></app-tech-row>
+</div>
+
+<br>
+
+<div>
+    {{ currentTech.name.length > 0 ? 'You have chosen '+ currentTech.name : '' }}
+</div>

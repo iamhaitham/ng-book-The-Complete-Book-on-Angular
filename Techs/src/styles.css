@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+.allPage>div{
+    display:flex;
+    flex-direction:row;
+}
+
+.items{
+  margin:0 50px;
+}
+
+.imageSize>div>img{
+    width:250px;
+    height:150px;
+}
+
+.buttonsInRow,.contentInRow{
+    display:flex;
+    flex-direction:row;
+}
+
+.contentInRow>div{
+    margin-left:2%;
+}
+
+.buttonsInRow>*{
+    margin:0 1%;
+}
+
+.detailsAndButtonsInColumn{
+    display:flex;
+    flex-direction:column;
+}
+
+.detailsAndButtonsInColumn>div{
+    margin-bottom:5%;
+}
+
+.votesSize{
+    font-size: 300%;
+    margin-right:2%;
+}
+
+.isSelected{
+    border:2px solid #e8e9eb;
+    box-shadow:2px 2px #edeeee;
+    padding:5px;
+    border-radius:10px;
+}

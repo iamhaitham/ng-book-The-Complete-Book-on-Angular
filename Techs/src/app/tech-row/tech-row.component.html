@@ -1,0 +1,13 @@
+<div class="items" (click)="onClickEmit(tech)">
+    <div class="contentInRow">
+        <app-tech-votes [tech]="tech"></app-tech-votes>
+        <div class="detailsAndButtonsInColumn">
+            
+            <app-tech-details [tech]="tech"></app-tech-details>
+            <div class="buttonsInRow">
+                <app-tech-buttonup [tech]="tech"></app-tech-buttonup>
+                <app-tech-buttondown [tech]="tech"></app-tech-buttondown>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<p
+  [ngStyle]="{
+    color: 'red',
+    'background-color': 'yellow'
+  }"
+>
+  The style used here is done using
+  &#91;ngStyle&#93;="&#123;'key':'value'&#125;"
+</p>
+
+<p [style.color]="'red'" [style.background-color]="'yellow'">
+  The style used here is done using
+  &#91;style.&#60;cssProperyName&#62;&#93;="'value'"
+</p>
+
+<hr>
+
+<p [ngStyle]="chosenStyles">This paragraph's style is dynamic. You can change it in the following form</p>
+
+<form class="myForm">
+  <input type="text" placeholder="Enter text color" name="textColor" #textColor/>
+  <input type="text" placeholder="Enter background color" name="textColor" #bgColor/>
+  <input type="text" placeholder="Enter text size" name="textSize" #textSize/>
+  <button (click)="applyChanges(textColor,bgColor,textSize)">Apply</button>
+</form>

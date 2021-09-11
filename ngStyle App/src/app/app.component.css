@@ -1,0 +1,14 @@
+.myForm{
+    display:flex;
+    flex-direction: column;
+    width:200px;
+}
+.myForm>[type="text"]{
+    padding:5px;
+    margin:2% 0;
+}
+
+.myForm>button{
+    width:80px;
+    margin:2% 0;
+}

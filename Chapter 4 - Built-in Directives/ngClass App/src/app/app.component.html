@@ -1,0 +1,22 @@
+<p>This is never bordered</p>
+<p [class.alwaysBordered]="true">This is always bordered</p>
+<p [ngClass]="myClasses">
+  Using object literal. Border {{ myClasses.toggleBorder ? "ON" : "OFF" }}
+</p>
+<p [ngClass]="myClasses">
+  Using object var. Border {{ myClasses.toggleBorder ? "ON" : "OFF" }}
+</p>
+<button (click)="setToggleClasses()">Toggle</button>
+
+<hr />
+
+<input type="checkbox" (click)="changeIsBlueIsRound('blue')"/> 
+Blue <input type="checkbox" (click)="changeIsBlueIsRound('rounded')" /> Round
+
+<p [class.alwaysBlueRounded]="true">
+  This will always have a blue background and round corners
+</p>
+
+<p class="base" [ngClass]="isBlueisRounded">
+  This is {{ isBlueisRounded.indexOf('blue') > -1 ? '' : 'NOT' }} blue and {{ isBlueisRounded.indexOf('rounded') > -1 ? '' : 'NOT' }} round
+</p>

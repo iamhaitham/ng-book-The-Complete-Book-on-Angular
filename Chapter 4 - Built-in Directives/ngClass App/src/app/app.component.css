@@ -1,0 +1,27 @@
+.alwaysBordered,.toggleBorder{
+    border:1px dashed black;
+    background-color: rgb(153, 153, 153);
+}
+
+.alwaysBlueRounded{
+    color:white;
+    padding:7px;
+    background-color: blue;
+    border:2px solid blue;
+    border-radius: 5px;
+}
+
+.base{
+    color:black;
+    padding:7px;
+}
+
+.rounded{
+    border:2px solid blue;
+    border-radius: 5px;
+}
+
+.blue{
+    color:white;
+    background-color:blue;
+}

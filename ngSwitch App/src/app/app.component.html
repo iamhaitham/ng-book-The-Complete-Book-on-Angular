@@ -1,0 +1,10 @@
+<div> Current choice is {{choice}}</div>
+<ul [ngSwitch]="choice">
+  <li *ngSwitchCase="1">First Choice</li>
+  <li *ngSwitchCase="2">Second Choice</li>
+  <li *ngSwitchCase="2">Second Choice, again!</li>
+  <li *ngSwitchCase="3">Third Choice</li>
+  <li *ngSwitchCase="4">Fourth Choice</li>
+  <li *ngSwitchDefault="4">Default Choice</li>
+</ul>
+<button (click)="nextChoice()">Next Choice</button>

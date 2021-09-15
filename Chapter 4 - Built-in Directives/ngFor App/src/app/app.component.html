@@ -1,0 +1,49 @@
+<div>
+  <h4>Simple list of strings</h4>
+  <ul type="none">
+    <li *ngFor="let city of cities">{{ city }}</li>
+  </ul>
+</div>
+
+<div>
+  <h4>List of objects</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.city}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngFor="let pbc of peopleByCity">
+ <h2>{{pbc.city}}</h2> 
+ <table>
+   <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let person of pbc.people">
+       <th>{{person.name}}</th>
+       <th>{{person.age}}</th>
+     </tr>
+   </tbody>
+ </table>
+</div>
+
+<div>
+  <h4>List with index</h4>
+  <p *ngFor="let city of cities;let i=index;">{{i+1}} - {{city}}</p>
+</div>

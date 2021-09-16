@@ -1,0 +1,8 @@
+<form #skuForm="ngForm" (ngSubmit)="onSubmit(skuForm.value)">
+    <h2>Demo Form: Sku</h2>
+    <div id="myFormWrapper">
+        <label for="skuInput">SKU</label>
+        <input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel />
+    </div>
+    <button>Submit</button>
+</form>

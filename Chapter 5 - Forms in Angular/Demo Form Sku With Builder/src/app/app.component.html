@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <h2>Demo Form: Sku</h2>
+    <div id="myFormWrapper">
+        <label for="skuInput">SKU</label>
+        <input type="text" id="skuInput" placeholder="SKU" name="sku" formControlName="sku" />
+        <!-- Can also be written as [formControlName]="'sku'" but I just used the one in the documentation not the one in the book -->
+    </div>
+    <button>Submit</button>
+</form>

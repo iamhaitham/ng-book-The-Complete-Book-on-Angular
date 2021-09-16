@@ -1,0 +1,13 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <h2>Demo Form SKU</h2>
+    <div id="myFormWrapper">
+        <label for="SKU">SKU</label>
+        <input type="text" name="sku" id="SKU" formControlName="sku" />
+    </div>
+    <button>Submit</button>
+    <div [class.error]="!myForm.controls['sku'].valid && myForm.controls['sku'].touched">
+        <p *ngIf="!myForm.controls['sku'].valid">SKU is invalid</p>
+        <p *ngIf="myForm.controls['sku'].hasError('required')">SKU has errors</p>
+        <p *ngIf="!myForm.valid">Form is invalid</p>
+    </div>
+</form>

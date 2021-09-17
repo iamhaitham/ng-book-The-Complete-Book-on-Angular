@@ -1,0 +1,13 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+  <h2>Demo Form Sku</h2>
+  <div id="myFormWrapper">
+    <label for="sku"></label>
+    <input type="text" name="sku" id="sku" formControlName="sku"/>
+  </div>
+  <button>Submit</button>
+  <div [class.error]="myForm.controls['sku'].touched">
+    <p *ngIf="myForm.controls['sku'].hasError('required')">Sku is required</p>
+    <p *ngIf="myForm.controls['sku'].hasError('invalidSku')">Sku must start with 123</p>
+    <p *ngIf="!myForm.valid">Form is invalid</p>
+  </div>
+</form>

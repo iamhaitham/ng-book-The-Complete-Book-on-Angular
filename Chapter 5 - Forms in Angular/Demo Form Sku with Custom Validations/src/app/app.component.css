@@ -1,0 +1,33 @@
+button {
+    background-color: #cccccc;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    padding: 7px;
+}
+
+#myFormWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.75em;
+}
+
+#myFormWrapper>input {
+    margin-top: 0.50em;
+    width: 20em;
+}
+
+form {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    width: 24rem;
+    padding: 20px;
+}
+
+.error>p {
+    background-color: rgb(233, 201, 201);
+    color: red;
+    padding: 5px;
+    border: 1px dashed red;
+    width: auto;
+}

@@ -1,0 +1,18 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+  <h2>Demo Form Sku</h2>
+  <div id="myFormWrapper">
+    <label>Sku</label>
+    <input
+      type="text"
+      placeholder="Enter Sku ..."
+      name="sku"
+      formControlName="sku"
+    />
+  </div>
+  <button>Submit</button>
+  <div [class.error]="!myForm.valid && myForm.touched">
+    <p *ngIf="sku.hasError('required')">Sku is required</p>
+    <p *ngIf="sku.hasError('invalidSku')">Sku must start with 123</p>
+    <p *ngIf="!myForm.valid">Form is invalid</p>
+  </div>
+</form>

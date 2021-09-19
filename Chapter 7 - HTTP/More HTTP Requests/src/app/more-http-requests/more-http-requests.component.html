@@ -1,0 +1,4 @@
+<button (click)="makePost()">Make Post</button>
+<pre *ngIf="loading">Loading...</pre>
+<p *ngIf="success">{{success}}</p>
+<pre *ngIf="postError">{{postError|json}}</pre>

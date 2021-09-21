@@ -1,0 +1,14 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+    <input
+      type="text"
+      placeholder="Enter a goal"
+      name="goalToBeAdded"
+      [(ngModel)]="goalToBeAdded"
+    />
+  <button mat-raised-button class="addGoalButton">Add Goal</button>
+</form>
+
+<div class="somponentsInRow">
+  <app-to-do></app-to-do>
+  <app-doing></app-doing>
+</div>

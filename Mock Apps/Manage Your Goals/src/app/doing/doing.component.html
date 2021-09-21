@@ -1,0 +1,7 @@
+<h1>Doing</h1>
+<ul>
+    <mat-card *ngFor="let goal of goalService.doingGoals" class="this-mat-card">
+    {{ goal.goalName.goalToBeAdded }}
+    <button mat-raised-button color="primary" (click)="finishGoal(goal)">Finish</button>
+  </mat-card>
+</ul>

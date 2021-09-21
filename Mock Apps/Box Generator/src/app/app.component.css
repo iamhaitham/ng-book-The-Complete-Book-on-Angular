@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    align-items: center;
+    position: absolute;
+    left: 38em;
+    top: 12em;
+}
+
+.wrapper>input {
+    margin-top: 2%;
+}
+
+.wrapper>button {
+    width: 3em;
+    margin-top: 2%;
+}
+
+app-boxes {
+    position: absolute;
+    top: 20rem;
+}

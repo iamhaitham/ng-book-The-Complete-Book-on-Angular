@@ -1,0 +1,10 @@
+<div>
+    <form class="wrapper" #boxGenerator="ngForm" (ngSubmit)="onSubmit(boxGenerator.value)">
+        <input matInput type="text" placeholder="Enter Color" name="colorValue" ngModel/>
+        <input matInput type="text" placeholder="Enter Height" name="heightValue" ngModel/>
+        <input matInput type="text" placeholder="Enter Width" name="widthValue" ngModel/>
+        <button mat-raised-button color="primary">Add</button>
+    </form>
+
+    <app-boxes [boxes]="boxes"></app-boxes>
+</div>

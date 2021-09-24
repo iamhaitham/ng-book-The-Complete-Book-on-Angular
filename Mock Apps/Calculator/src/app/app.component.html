@@ -1,0 +1,29 @@
+<form [formGroup]="myForm" >
+  <input
+    type="text"
+    name="x"
+    formControlName="x"
+    placeholder="X"
+  />
+
+  <select (click)="chooseOperation($event)">
+    <option value="" chosen>Choose an operation</option>
+    <option *ngFor="let option of options" value="{{ option }}">
+      {{ option }}
+    </option>
+  </select>
+
+  <input
+  type="text"
+  name="y"
+  formControlName="y"
+  placeholder="Y"
+/>
+</form>
+
+<div [ngSwitch]="chosenOperation">
+  <p *ngSwitchCase="options[0]">Plus {{result}}</p>
+  <p *ngSwitchCase="options[1]">Minus {{result}}</p>
+  <p *ngSwitchCase="options[2]">Multiplication {{result}}</p>
+  <p *ngSwitchCase="options[3]">Division {{result}}</p>
+</div>

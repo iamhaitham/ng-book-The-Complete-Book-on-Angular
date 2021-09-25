@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <tr>
+            <th> </th>
+            <th>Task ID</th>
+            <th>Task Name</th>
+            <th>Task Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks" [ngClass]="{'slashed':task.status}">
+            <td><input type="checkbox" (click)="moveToCompleted(task)"/></td>
+            <td >{{task.id}}</td>
+            <td>{{task.name}}</td>
+            <td>{{task.status ? 'Completed' : 'To Do'}}</td>
+        </tr>
+    </tbody>
+
+</table>

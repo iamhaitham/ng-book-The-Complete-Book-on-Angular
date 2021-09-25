@@ -1,0 +1,6 @@
+<form [formGroup]="myForm" (ngSubmit)="addTask(myForm.value)">
+  <input type="text" name="taskName" formControlName="taskName"/>
+  <button>Add Task</button>
+</form>
+
+<app-view-tasks [tasks]="taskService.tasks"></app-view-tasks>
